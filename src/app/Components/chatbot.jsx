@@ -10,8 +10,6 @@ const Chatbot = () => {
   };
 
   return (
-    <div className='h-[200px] bg-red-500'>
-
     <Script id="chatbot-script" strategy="afterInteractive" onLoad={handlerloader} onError={handleError}>
       {`
         window.customTokens = {
@@ -24,7 +22,6 @@ const Chatbot = () => {
             `}
       
     </Script>
-            </div>
   );
 };
 
