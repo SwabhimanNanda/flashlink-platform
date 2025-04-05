@@ -29,6 +29,7 @@ import SocialMediaStrip from "../Components/SocialMediaStrip";
 import ImageCarousel from "../Components/ImageCarousel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Chatbot from "../Components/chatbot";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -58,6 +59,8 @@ export default function Home() {
     }
   };
   return (
+    <>
+    <Chatbot/>
     <div className="flex flex-col min-h-svh bg-gradient-to-r from-pink-100/50 to-gray-100 text-gray-100">
       <main className="flex-1">
         <section className=" lg:h-dvh  w-full flex justify-center lg:px-[200px] py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-pink-200 to-gray-100 text-gray-100">
@@ -66,13 +69,13 @@ export default function Home() {
               <div className="flex flex-col max-lg:gap-3 max-md:mt-[10px]">
                 <h1
                   className={`lg:mb-[40px] text-4xl text-black font-bold  sm:text-3xl md:text-4xl lg:text-7xl  tracking-tight ${bri.className}`}
-                >
+                  >
                   Your Social Links, <br /> One Flash Card
                   <span className="text-pink-5">.</span>
                 </h1>
                 <p
                   className={`max-w-[500px] leading-[20px] text-gray-500 text-[15px] md:text-xl lg:text-xl ${inter.className}`}
-                >
+                  >
                   Create, share, and connect. FlashLink brings all your social
                   profiles together in one sleek, shareable card.
                 </p>
@@ -88,7 +91,7 @@ export default function Home() {
                 src={pic1}
                 alt="img1"
                 className="max-lg:w-[90%] max-lg:h-auto lg:w-[400px] rounded-tl-[50px]"
-              />
+                />
             </div>
           </div>
         </section>
@@ -96,7 +99,7 @@ export default function Home() {
           <div className="h-fit py-[40px] flex flex-col lg:flex-row-reverse items-center justify-evenly  lg:px-[60px]  lg:gap-[150px] bg-gray-50">
             <h1
               className={`text-gray-500 text-[18px] text-wrap text-center ${inter.className}`}
-            >
+              >
               Your social media, your way. Add your profiles and let the world
               connect with you.
             </h1>
@@ -107,7 +110,7 @@ export default function Home() {
           <div className="w-full  h-fit py-[20px] lg:py-[40px] px-[10px] lg:px-[50px] sm:xl md:2xl lg:4xl xl:text-5xl text-black bg-blue-200/40 rounded-[40px] relative">
             <p
               className={`lg:leading-[62px] max-md:px-4 word-spacing-custom ${bri2.className} `}
-            >
+              >
               <span className={`${bri3.className}`}>
                 FlashLink makes it easy to showcase your
                 <span className={`${bri2.className}`}> social profiles</span>,
@@ -131,7 +134,7 @@ export default function Home() {
             {/* Title */}
             <h2
               className={`${bri2.className} text-3xl tracking-normal sm:text-4xl md:text-8xl text-center lg:mb-[90px] text-black`}
-            >
+              >
               Your Digital Identity Card
             </h2>
 
@@ -143,6 +146,7 @@ export default function Home() {
 
               <div className="w-full lg:w-1/2">
                 <div className="flex flex-col gap-7 text-gray-800">
+              
                   <h3
                     className={` ${bri2.className} max-md:text-2xl  max-lg:text4xl  text-5xl font-bold `}
                   >
@@ -372,5 +376,6 @@ export default function Home() {
         </section>
       </main>
     </div>
+    </>
   );
 }
