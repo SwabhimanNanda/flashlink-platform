@@ -10,18 +10,21 @@ const Chatbot = () => {
   };
 
   return (
+    <div className='h-[200px] bg-red-500'>
+
     <Script id="chatbot-script" strategy="afterInteractive" onLoad={handlerloader} onError={handleError}>
       {`
         window.customTokens = {
-          botId: "6450ad48ddccbe3a9081740f",
-          appSecret: "963fcf9ef5e4dd2e6a9051357e1cdb69c9168c0e2e0f646b"
-        };
-        var script = document.createElement('script');
-        script.src = "https://sthir.chatomate.in/webchat/v2/webChat.js";
-        document.body.appendChild(script);
-      `}
+            botId: "6450ad48ddccbe3a9081740f",
+            appSecret: "963fcf9ef5e4dd2e6a9051357e1cdb69c9168c0e2e0f646b"
+            };
+            var script = document.createElement('script');
+            script.src = "https://sthir.chatomate.in/webchat/v2/webChat.js";
+            document.body.appendChild(script);
+            `}
       
     </Script>
+            </div>
   );
 };
 
